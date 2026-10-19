@@ -15,6 +15,8 @@ Application monofichier (HTML + CSS + JavaScript, sans dépendance, hors ligne),
 
 Chaque push sur `main` (ou sur une branche `claude/**`), ou un lancement manuel du workflow « Android APK », produit une Release **Carnet Sport build N** avec le fichier `.apk` attaché. Sur le téléphone : ouvrir la page **Releases** du dépôt, télécharger l'APK, autoriser l'installation depuis des sources inconnues.
 
+Tous les APK sont signés avec la même clé de test (`android/app/debug.keystore`, mot de passe `android`) et portent le numéro de build comme `versionCode` : un nouveau build s'installe par-dessus le précédent en gardant les données. Cette clé est publique : elle ne convient pas à une publication sur le Play Store.
+
 ## Modifier l'application
 
 Modifier `www/index.html`, puis pousser : la CI fait `npx cap sync android` et `./gradlew assembleDebug`.
