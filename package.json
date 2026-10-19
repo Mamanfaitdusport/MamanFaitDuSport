@@ -1,0 +1,17 @@
+{
+  "name": "carnet-sport",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Carnet de suivi Sport — application web hors ligne packagée en APK Android avec Capacitor",
+  "scripts": {
+    "sync": "cap sync android",
+    "build:apk": "cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/core": "^8.5.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.3"
+  }
+}
